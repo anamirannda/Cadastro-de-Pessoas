@@ -2,40 +2,6 @@
 arquivo = 'regist.txt'
 
 
-    
-def escolha():
-    
-    while True:
-    
-        print('''\nEscolha uma da opções abaixo:\n
-    1- Adicionar cadastro
-    2- Apagar Cadastro
-    3- Conferir todos os cadastros
-    4- Encerrar o programa''')
-    
-        opcao = int(input('\nDigite sua opção:'))
-             
-    
-        if opcao == 1:           
-            adicionar()
-            
-            if arquivo == '':
-                arq = open(arquivo,'wt+')
-                arq.close()
-            else:
-                arq = open(arquivo,'at')      
-                  
-        if opcao == 2:
-            apagar()
-        
-        elif opcao == 3:
-            ver()
-    
-        elif opcao == 4:
-            break
-    
-    
-
 def adicionar():
     
     while True:
@@ -74,7 +40,6 @@ def adicionar():
         salvar =str(input('\nSalvar o cadastro[S/N]:')).upper()
     
         if salvar =='S':
-            
             
             arq = open(arquivo,'at') 
             arq.write(f'\nNome:{nome}\nCPF:{cpf}\nIdade:{idade}\nSexo:{sexo}\nGênero:{genero}\nE-mail:{email}\nTelefone:{tel}\n')
